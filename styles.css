@@ -2,6 +2,7 @@
     margin : 0;
     padding : 0; 
     font-family : "poppins", sans-serif;
+    box-sizing: border-box;
 }
 #banner {
     background:linear-gradient(rgba(0,0,0,0.5),#963c008f),url(images2/background-image.jpg);
@@ -12,14 +13,35 @@
 #banner-head{
     display: flex;
     justify-content: space-between;
-    background: rgb(240, 224, 224);
+    align-items: space-around;
+    background: brown;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
 }
 #banner h3{
     color: orange;
     position: relative;
-    top: 30px;
+    top: 17px;
     left: 10%;
     font-style: italic;
+}
+nav{
+    position: relative;
+    top: 17px;
+    right: 10%;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 3.125rem 1.25rem;  
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 .banner-text{
     text-align: center;
@@ -34,29 +56,15 @@
     font-size: 1.25rem;
     font-style: italic;
 }
-nav{
-    position: fixed;
-    top: 30px;
-    right: 10%;
-}
-nav ul li{
-    display: inline;
-    list-style: none;
-    margin: 3.125rem 1.25rem;  
-}
-nav ul li a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
 @media screen and (max-width: 770px){
     .banner-text h1{
-        font-size: 2.75rem; /*44px*/
+        font-size: 2.75rem; /*44px*/ 
     }
 }
 #feature{
-    width: 100%;
-    padding-bottom: 4.375rem; /*70px 0 */
+    width: 100%; 
+    padding-bottom: 4.375rem; /*70px 0 */ 
+    position: center; 
 }
 .title-text{
     text-align: center;
@@ -72,10 +80,6 @@ nav ul li a{
 p{
     font-size: 0.9375rem;
     font-weight: bold;
-}
-#feature{
-    background:url(images2/cork-board/cork-board.png);
-    position: center;
 }
 .feature-box{
     width: 80%;
@@ -138,7 +142,6 @@ p{
 #service{
     width: 100%;
     padding: 4.375rem; /*70px 0 */
-    background: url(images2/cork-board/cork-board.png)
 }
 .service-box{
     width: 80%;
@@ -214,11 +217,10 @@ hr{
 #testimonial{
     width: 100%;
     padding: 70px 0;
-    background: url(images2/cork-board/cork-board.png)
 }
 .testimonial-row{
     width: 80%;
-    margin: auto;
+    margin: 40px auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -229,7 +231,7 @@ hr{
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 5px;
-    box-shadow: 0 10px 20px 3px rgb(92, 79, 79);
+    box-shadow: 0 10px 20px 3px rgb(245, 244, 244);
     cursor: pointer;
     transition: transform .5s;
 }
@@ -264,12 +266,11 @@ hr{
 }
 #footer{
     padding: 100px 0 20px;
-    background: rgba(236, 204, 186, 0.89);
     position: relative;
 }
 .footer-row{
     width: 80%;
-    margin: 0 auto;
+    margin: 30px auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -293,16 +294,9 @@ hr{
     color: #963c008f;
     margin: 10px;
 }
-.footer-img{
-    max-width: 370px;
-    opacity: 0.1;
-    position: absolute;
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, -50%);
-}
 .social-links{
     text-align: center;
+    margin: auto;
 }
 .social-links .fa{
     height: 40px;
@@ -328,8 +322,5 @@ hr{
     .footer-left .fa,.footer-right .fa{
         flex-basis: 100%;
         font-size: 14px;
-    }
-    .footer-img{
-        top: 25%;
     }
 }
